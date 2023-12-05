@@ -4,13 +4,25 @@ from math import sin
 # >>> 0
 # -----------
 from math import pi
+from math import e
 
-def f(a, b, N):
-    h = (b - a) / N
+def g(f, a=0, b=1, n=100):
+    H = (b - a) / n
     S = 0
-    for i in range(N):
-       S = S + (h / 2) * (sin(a + i * h) + sin(a + (i + 1) * h))
+    for i in range(n):
+       S = S + (H / 2) * (f(a + i * H) + f(a + (i + 1) * H))
     
     return S
 
-print(f(0, (pi/2), 100))
+def h(x):
+    return sin(x)
+
+def i(x):
+    return (4 / (1 + x **2))
+
+def j(x):
+    return (pi ** (1/2)) * (e ** ((-1) * (x ** 2)))
+
+print(g(h, 0, pi/2, 50))
+print(g(i, 0, 1, 100))
+print(g(j, -100, 100, 1000))

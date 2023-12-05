@@ -1,13 +1,13 @@
-a = input("aの値を入力: ")
-b = input("bの値を入力: ")
-
-# TODO
-a = int(a)
-b = int(b)
+import sys
 
 def f(n):
+    
+    if not(n == int(n)) or not((n >= 1) == True): #nが自然数であることを確認
+        print("変数に自然数を入れてください")
+        sys.exit()
+
     if n == 1:
-        print("1は素数ではありません")
+        return False
     
     else:
         s = 0
@@ -19,10 +19,7 @@ def f(n):
                 break
 
         if s == 0:
-            print(f"{n}" + "は素数です")
+            return True
     
         else:
-            print(f"{n}" + "は素数ではありません")
-
-f(a)
-f(b)
+            return False
