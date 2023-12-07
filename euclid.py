@@ -7,9 +7,7 @@ b = int(b)
 
 def f(x, y):
     if x < y: #xが大きい方、yが小さい方の数字に直す
-        z = x
-        x = y
-        y = z
+        x, y = y, x
 
     while True:
         if x == y:

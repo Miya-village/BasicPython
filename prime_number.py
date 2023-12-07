@@ -5,10 +5,13 @@ b = input("bの値を入力: ")
 a = int(a)
 b = int(b)
 
-def f(n):
+def p_judge(n):
     if n == 1:
         print("1は素数ではありません")
-    
+
+    elif n == 2:
+        print("2は素数です")
+
     else:
         s = 0
         i = 1
@@ -24,5 +27,5 @@ def f(n):
         else:
             print(f"{n}" + "は素数ではありません")
 
-f(a)
-f(b)
+p_judge(a)
+p_judge(b)
