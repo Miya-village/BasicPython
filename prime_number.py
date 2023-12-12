@@ -1,9 +1,4 @@
-a = input("aの値を入力: ")
-b = input("bの値を入力: ")
-
-# TODO
-a = int(a)
-b = int(b)
+import sys
 
 def p_judge(n):
     if n == 1:
@@ -29,3 +24,4 @@ def p_judge(n):
 
 p_judge(a)
 p_judge(b)
+
