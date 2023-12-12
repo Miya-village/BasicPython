@@ -1,14 +1,12 @@
 import sys
 
-def f(n):
-    
-    if not(n == int(n)) or not((n >= 1) == True): #nが自然数であることを確認
-        print("変数に自然数を入れてください")
-        sys.exit()
-
+def p_judge(n):
     if n == 1:
-        return False
-    
+        print("1は素数ではありません")
+
+    elif n == 2:
+        print("2は素数です")
+
     else:
         s = 0
         i = 1
@@ -19,7 +17,11 @@ def f(n):
                 break
 
         if s == 0:
-            return True
+            print(f"{n}" + "は素数です")
     
         else:
-            return False
+            print(f"{n}" + "は素数ではありません")
+
+p_judge(a)
+p_judge(b)
+
